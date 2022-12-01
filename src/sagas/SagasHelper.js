@@ -12,7 +12,7 @@ import axios from 'axios';
 export const callRestAPI = async (APIURL = "", request = {}, headers = "") => {
 
 	axios.defaults.headers.common = headers;
-	if(headers == "PostHeaderForm"){
+	if(headers === "PostHeaderForm"){
 		delete axios.defaults.headers.common;
 		axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 		//request = qs.stringify(request);
